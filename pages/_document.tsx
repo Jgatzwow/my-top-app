@@ -4,7 +4,6 @@ class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
 
-    console.log('ctx: ' + JSON.stringify(ctx, null, 2));
 
     return {...initialProps};
   }

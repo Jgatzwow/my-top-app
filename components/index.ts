@@ -1,2 +1,2 @@
-export * from './Htag/Htag';
+export * from './Htag/HTag';
 export * from './Button/Button';
