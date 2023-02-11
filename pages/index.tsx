@@ -1,12 +1,16 @@
 import { Inter } from '@next/font/google'
 import { Button, HTag, Tag } from '@/components'
 import { PTag } from '@/components/PTag/PTag'
+import { useState } from 'react'
+import { Rating } from '@/components/Rating/Rating'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+    const [rating, setRating] = useState<number>(4)
   return (
     <>
+      <Rating rating={rating} isEditable setRating={setRating}/>
       <HTag tag='h1'>Text</HTag>
       <Button appearance='primary' arrow='right'>
         Some btn
