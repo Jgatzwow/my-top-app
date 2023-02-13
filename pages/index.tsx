@@ -3,13 +3,14 @@ import { Button, HTag, Tag } from '@/components'
 import { PTag } from '@/components/PTag/PTag'
 import { useState } from 'react'
 import { Rating } from '@/components/Rating/Rating'
+import {Layout} from "@/Layout/Layout";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
     const [rating, setRating] = useState<number>(4)
   return (
-    <>
+    <Layout>
       <Rating rating={rating} isEditable setRating={setRating}/>
       <HTag tag='h1'>Text</HTag>
       <Button appearance='primary' arrow='right'>
@@ -30,6 +31,6 @@ export default function Home() {
       <Tag color={'green'} size={'medium'}>
         Medium
       </Tag>
-    </>
+    </Layout>
   )
 }
